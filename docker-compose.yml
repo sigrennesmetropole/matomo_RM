@@ -31,6 +31,7 @@ services:
     volumes:
       - matomo:/var/www/html:ro
       - ./matomo.conf:/etc/nginx/conf.d/default.conf:ro
+      - /var/applications/apache/ssl/wildcard.sig.rennesmetropole.fr/:/var/applications/apache/ssl/wildcard.sig.rennesmetropole.fr/
     ports:
       - 8090:80
       - 4435:443
