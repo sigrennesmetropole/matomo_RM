@@ -14,12 +14,6 @@ URL : https://testapp.sig.rennesmetropole.fr/matomo/index.php
 ## Apache 
 
 ```bash
-# Au niveau du <VirtualHost *:80>
-<Location "/matomo/">
-    ProxyPass "http://172.17.0.1:8090/"
-    ProxyPassReverse "http://172.17.0.1:8090/"
-</Location>
-
 # Au niveau du <VirtualHost *:443>
 <Location "/matomo/">
     ProxyPass "https://172.17.0.1:4435/"
